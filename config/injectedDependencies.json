@@ -1,0 +1,183 @@
+[
+  {
+    "modId": "TFC-Tweaks",
+    "deps": [
+      {
+        "type": "after",
+        "target": "terrafirmacraft"
+      },
+      {
+        "type": "before",
+        "target": "lwstfc"
+      },
+      {
+        "type": "before",
+        "target": "bspkrsCore"
+      },
+      {
+        "type": "before",
+        "target": "StatusEffectHUD"
+      },
+      {
+        "type": "before",
+        "target": "TerraFirmaPumpkins"
+      },
+      {
+        "type": "before",
+        "target": "terrafirmastuff"
+      },
+      {
+        "type": "before",
+        "target": "tfcm"
+      },
+      {
+        "type": "before",
+        "target": "tfcautomatedbellows"
+      },
+      {
+        "type": "before",
+        "target": "tfccellars"
+      },
+      {
+        "type": "before",
+        "target": "Waila"
+      },
+      {
+        "type": "before",
+        "target": "tfccrops"
+      },
+      {
+        "type": "before",
+        "target": "BiblioCraft"
+      },
+      {
+        "type": "before",
+        "target": "BuildCraft|Core"
+      },
+      {
+        "type": "before",
+        "target": "BuildCraft|Transport"
+      },
+      {
+        "type": "before",
+        "target": "BuildCraft|Factory"
+      },
+      {
+        "type": "before",
+        "target": "BuildCraft|Silicon"
+      },
+      {
+        "type": "before",
+        "target": "BuildCraft|Robotics"
+      },
+      {
+        "type": "before",
+        "target": "BuildCraft|Energy"
+      },
+      {
+        "type": "before",
+        "target": "BuildCraft|Builders"
+      },
+      {
+        "type": "before",
+        "target": "BuildCraft|Compat"
+      },
+      {
+        "type": "before",
+        "target": "Railcraft"
+      },
+      {
+        "type": "before",
+        "target": "ImmersiveEngineering"
+      },
+      {
+        "type": "before",
+        "target": "tfctech"
+      },
+      {
+        "type": "before",
+        "target": "bis"
+      },
+      {
+        "type": "before",
+        "target": "bookshelf"
+      },
+      {
+        "type": "before",
+        "target": "betterboat"
+      },
+      {
+        "type": "before",
+        "target": "BiblioWoodsTFC"
+      },
+      {
+        "type": "before",
+        "target": "MineTweaker3"
+      },
+      {
+        "type": "before",
+        "target": "ExtraUtilities"
+      },
+      {
+        "type": "before",
+        "target": "FTBL"
+      },
+      {
+        "type": "before",
+        "target": "FTBU"
+      },
+      {
+        "type": "before",
+        "target": "inventorytweaks"
+      },
+      {
+        "type": "before",
+        "target": "journeymap"
+      },
+      {
+        "type": "before",
+        "target": "lmmx"
+      },
+      {
+        "type": "before",
+        "target": "MMMLibX"
+      },
+      {
+        "type": "before",
+        "target": "zabuton"
+      },
+      {
+        "type": "before",
+        "target": "modtweaker2"
+      },
+      {
+        "type": "before",
+        "target": "MouseTweaks"
+      },
+      {
+        "type": "before",
+        "target": "NEIPlugins"
+      },
+      {
+        "type": "before",
+        "target": "OpenMods"
+      },
+      {
+        "type": "before",
+        "target": "OpenBlocks"
+      },
+      {
+        "type": "before",
+        "target": "TerraFirmaCraftNEIplugin"
+      },
+      {
+        "type": "before",
+        "target": "TFCTweaker"
+      },
+      {
+        "type": "before",
+        "target": "waystones"
+      }
+    ]
+  }
+]
