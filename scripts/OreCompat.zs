@@ -26,5 +26,5 @@ for i, Sio in tfcSmallIronOre {
 	//early automated iron
 }
 
-mods.railcraft.Rolling.addShapeless(<terrafirmacraft:item.Pig Iron Ingot>, [<terrafirmacraft:item.Wrought Iron Ingot>]);
+mods.railcraft.Rolling.addShaped(<terrafirmacraft:item.Wrought Iron Ingot>, [[null,null,null],[null,<terrafirmacraft:item.Pig Iron Ingot>,null]]);
 //pig iron to iron

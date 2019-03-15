@@ -20,10 +20,6 @@
       },
       {
         "type": "before",
-        "target": "TerraFirmaPumpkins"
-      },
-      {
-        "type": "before",
         "target": "terrafirmastuff"
       },
       {
@@ -37,14 +33,6 @@
       {
         "type": "before",
         "target": "tfccellars"
-      },
-      {
-        "type": "before",
-        "target": "Waila"
-      },
-      {
-        "type": "before",
-        "target": "tfccrops"
       },
       {
         "type": "before",
@@ -120,6 +108,10 @@
       },
       {
         "type": "before",
+        "target": "Waila"
+      },
+      {
+        "type": "before",
         "target": "FTBL"
       },
       {
@@ -133,18 +125,6 @@
       {
         "type": "before",
         "target": "journeymap"
-      },
-      {
-        "type": "before",
-        "target": "lmmx"
-      },
-      {
-        "type": "before",
-        "target": "MMMLibX"
-      },
-      {
-        "type": "before",
-        "target": "zabuton"
       },
       {
         "type": "before",

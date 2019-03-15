@@ -1,8 +1,17 @@
+var hammer = <ore:itemHammer>.transformDamage(4);
+var chisel = <ore:itemChisel>.transformDamage(4);
+var saw = <ore:itemSaw>.transformDamage(4);
+//hammer, chisel&saw used in crafting
+
 recipes.remove(<ExtraUtilities:unstableingot>);
 recipes.addShaped(<ExtraUtilities:unstableingot>, 
-[[null,<ore:stoneCobble>,null],
-[null,<terrafirmacraft:item.Amethyst>,null],
-[null,<ore:ingotSteel>,null]]);
+[[null,<ore:ingotSteel>,null],
+[null,chisel,null],
+[null,<terrafirmacraft:item.Amethyst>,null]]);
+recipes.addShaped(<ExtraUtilities:unstableingot>, 
+[[null,<ore:ingotSteel>,null],
+[null,chisel,null],
+[null,<terrafirmacraft:item.Opal>,null]]);
 //unstable ingot
 
 recipes.remove(<ExtraUtilities:unstableingot:1>);
@@ -25,13 +34,13 @@ recipes.addShapeless(<OpenBlocks:infoBook>,
 recipes.remove(<OpenBlocks:generic>);
 recipes.addShapedMirrored(<OpenBlocks:generic>, 
 [[<terrafirmacraft:item.Prep Hide:2>,<ore:treatedStick>,null],
-[<terrafirmacraft:item.Prep Hide:2>,<ore:materialString>,<ore:treatedStick>],
+[<terrafirmacraft:item.Prep Hide:2>,<ore:materialCloth>,<ore:treatedStick>],
 [<terrafirmacraft:item.Prep Hide:2>,<terrafirmacraft:item.Prep Hide:2>,<terrafirmacraft:item.Prep Hide:2>]]);
 //glider part
 
 recipes.remove(<OpenBlocks:hangglider>);
 recipes.addShaped(<OpenBlocks:hangglider>,
 [[<OpenBlocks:generic>,<ore:stickSteel>,<OpenBlocks:generic>],
-[<ore:stickSteel>,<ExtraUtilities:unstableingot>,<ore:stickSteel>],
+[<ore:stickSteel>,<ore:ingotUnstable>,<ore:stickSteel>],
 [null,<ore:stickSteel>,null]]);
 //glider

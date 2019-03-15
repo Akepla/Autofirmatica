@@ -1,8 +1,17 @@
 import minetweaker.data.IData;
 import minetweaker.item.IItemStack;
 
+var hammer = <ore:itemHammer>.transformDamage(4);
+var chisel = <ore:itemChisel>.transformDamage(4);
+var saw = <ore:itemSaw>.transformDamage(4);
+//hammer, chisel&saw used in crafting
+
 <ore:plateColoredSteel>.add(<terrafirmacraft:item.Blue Steel Sheet>);
 <ore:plateColoredSteel>.add(<terrafirmacraft:item.Red Steel Sheet>);
+<ore:coloredAnvil>.add(<terrafirmacraft:Anvil:6>);
+<ore:coloredAnvil>.add(<terrafirmacraft:Anvil:7>);
+var bestplate = <ore:plateColoredSteel>;
+var bestanvil = <ore:coloredAnvil>.reuse();
 //ore dict for colored steel
 
 recipes.remove(<minecraft:hopper>);
@@ -25,7 +34,25 @@ recipes.addShaped(<minecraft:wool>,
 [<terrafirmacraft:item.Wool>,null,<terrafirmacraft:item.Wool>]]);
 //vanilla wool
 
+recipes.remove(<waystones:waystone>);
+//waystones are only able to placed by op
 
+recipes.addShaped(<minecraft:mob_spawner:33>,
+[[<terrafirmacraft:item.Rose Gold Double Sheet>,<ore:ingotUnstable>,<terrafirmacraft:item.Rose Gold Double Sheet>],
+[<ore:ingotUnstable>,null,<ore:ingotUnstable>],
+[<terrafirmacraft:item.Rose Gold Double Sheet>,<ore:ingotUnstable>,<terrafirmacraft:item.Rose Gold Double Sheet>]]);
+//Blaze spawner(Unlimited Blaze Works
+
+recipes.addShaped(<minecraft:mob_spawner:31>,
+[[<terrafirmacraft:item.Sterling Silver Double Sheet>,<ore:ingotUnstable>,<terrafirmacraft:item.Sterling Silver Double Sheet>],
+[<ore:ingotUnstable>,null,<ore:ingotUnstable>],
+[<terrafirmacraft:item.Sterling Silver Double Sheet>,<ore:ingotUnstable>,<terrafirmacraft:item.Sterling Silver Double Sheet>]]);
+//Ghast spawner
+
+recipes.addShaped(<minecraft:web>,
+[[<ore:materialCloth>,null,<ore:materialCloth>],
+[null,<ore:materialString>,null],
+[<ore:materialCloth,null,<ore:materialCloth>]]);
 //cobweb
 
 recipes.remove(<minecraft:book>);
@@ -38,12 +65,8 @@ recipes.addShaped(<minecraft:book>,
 //book
 
 recipes.addShapeless(<minecraft:glass_bottle>,[<terrafirmacraft:item.Glass Bottle>]);
+recipes.addShapeless(<terrafirmacraft:item.Glass Bottle>,[<minecraft:glass_bottle>]);
 //bottle
-
-var hammer = <ore:itemHammer>.transformDamage(10);
-var chisel = <ore:itemChisel>.transformDamage();
-//hammer&chisel used in crafting
-
 
 recipes.remove(<minecraft:sandstone>);
 recipes.addShaped(<minecraft:sandstone> * 2,
@@ -89,3 +112,9 @@ recipes.addShaped(<Railcraft:cube:2>,
 [<ore:ingotSteel>,hammer,<ore:ingotSteel>],
 [<ore:ingotSteel>,<ore:ingotSteel>,<ore:ingotSteel>]]);
 //Steel block
+
+recipes.remove(<Railcraft:slab:39>);
+recipes.addShaped(<Railcraft:slab:39> * 6,
+[[null,chisel,null],
+[<minecraft:obsidian>,<minecraft:obsidian>,<minecraft:obsidian>],
+[null,bestanvil,null]]);
