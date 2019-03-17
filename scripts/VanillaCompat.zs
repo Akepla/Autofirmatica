@@ -1,10 +1,10 @@
 import minetweaker.data.IData;
 import minetweaker.item.IItemStack;
 
-var hammer = <ore:itemHammer>.transformDamage(4);
-var chisel = <ore:itemChisel>.transformDamage(4);
-var saw = <ore:itemSaw>.transformDamage(4);
-//hammer, chisel&saw used in crafting
+var hammer = <ore:itemHammer>.transformDamage(2);
+var chisel = <ore:itemChisel>.transformDamage(2);
+var saw = <ore:itemSaw>.transformDamage(2);
+//hammer, chisel&saw used in crafting(as for deco, it is cheaper)
 
 <ore:plateColoredSteel>.add(<terrafirmacraft:item.Blue Steel Sheet>);
 <ore:plateColoredSteel>.add(<terrafirmacraft:item.Red Steel Sheet>);
@@ -19,7 +19,7 @@ recipes.addShaped(<minecraft:hopper>,
 [[<ore:plateSteel>,null,<ore:plateSteel>],
 [<ore:plateSteel>,<ore:chestWood>,<ore:plateSteel>],
 [null,<minecraft:piston>,null]]);
-//recipes for piston
+//recipes for hopper
 
 recipes.remove(<minecraft:dropper>);
 recipes.addShaped(<minecraft:dropper>, 
@@ -28,24 +28,46 @@ recipes.addShaped(<minecraft:dropper>,
 [<ore:stoneCobble>,<minecraft:redstone>,<ore:stoneCobble>]]);
 //recipes for dropper
 
+recipes.remove(<minecraft:torch>);
+mods.Terrafirmacraft.Barrel.addItemFluidConversion(<minecraft:torch>, <liquid:creosote> * 1000, 
+<terrafirmacraft:Torch>, <liquid:creosote> * 1000, 0,  true, 24);
+//vanilla torch
+
 recipes.addShaped(<minecraft:wool>, 
 [[<terrafirmacraft:item.Wool>,null,<terrafirmacraft:item.Wool>],
 [null,<ore:stickWood>,null],
 [<terrafirmacraft:item.Wool>,null,<terrafirmacraft:item.Wool>]]);
 //vanilla wool
 
+recipes.addShapeless(<minecraft:packed_ice>,
+[<tfccellars:Ice>,<tfccellars:Ice>,<tfccellars:Ice>,<tfccellars:Ice>]);
+//packed ice
+
 recipes.remove(<waystones:waystone>);
 //waystones are only able to placed by op
 
+recipes.remove(<CarpentersBlocks:itemCarpentersHammer>);
+recipes.addShaped(<CarpentersBlocks:itemCarpentersHammer>,
+[[<ore:ingotIron>,<ore:ingotIron>,null],
+[null,<CarpentersBlocks:blockCarpentersBlock>,<ore:ingotIron>],
+[null,<CarpentersBlocks:blockCarpentersBlock>,null]]);
+recipes.remove(<CarpentersBlocks:itemCarpentersChisel>);
+recipes.addShaped(<CarpentersBlocks:itemCarpentersChisel>,
+[[<ore:ingotIron>],
+[<CarpentersBlocks:blockCarpentersBlock>],
+[<CarpentersBlocks:blockCarpentersBlock>]]);
+//carpenter block compat
+
+
 recipes.addShaped(<minecraft:mob_spawner:33>,
 [[<terrafirmacraft:item.Rose Gold Double Sheet>,<ore:ingotUnstable>,<terrafirmacraft:item.Rose Gold Double Sheet>],
-[<ore:ingotUnstable>,null,<ore:ingotUnstable>],
+[<ore:ingotUnstable>,<terrafirmacraft:item.Agate:4>,<ore:ingotUnstable>],
 [<terrafirmacraft:item.Rose Gold Double Sheet>,<ore:ingotUnstable>,<terrafirmacraft:item.Rose Gold Double Sheet>]]);
 //Blaze spawner(Unlimited Blaze Works
 
 recipes.addShaped(<minecraft:mob_spawner:31>,
 [[<terrafirmacraft:item.Sterling Silver Double Sheet>,<ore:ingotUnstable>,<terrafirmacraft:item.Sterling Silver Double Sheet>],
-[<ore:ingotUnstable>,null,<ore:ingotUnstable>],
+[<ore:ingotUnstable>,<terrafirmacraft:item.Jasper:4>,<ore:ingotUnstable>],
 [<terrafirmacraft:item.Sterling Silver Double Sheet>,<ore:ingotUnstable>,<terrafirmacraft:item.Sterling Silver Double Sheet>]]);
 //Ghast spawner
 
@@ -54,6 +76,10 @@ recipes.addShaped(<minecraft:web>,
 [null,<ore:materialString>,null],
 [<ore:materialCloth,null,<ore:materialCloth>]]);
 //cobweb
+
+//recipes.addShapeless(<minecraft:ice>,
+//[<tfccellars:Ice>,chisel]);
+//vanilla ice
 
 recipes.remove(<minecraft:book>);
 recipes.addShaped(<minecraft:book>, 
@@ -80,6 +106,12 @@ recipes.addShaped(<minecraft:gold_block>,
 [<ore:ingotGold>,hammer,<ore:ingotGold>],
 [<ore:ingotGold>,<ore:ingotGold>,<ore:ingotGold>]]);
 //Gold block(only for deco)
+
+recipes.addShaped(<minecraft:iron_block>,
+[[<ore:ingotIron>,<ore:ingotIron>,<ore:ingotIron>],
+[<ore:ingotIron>,hammer,<ore:ingotIron>],
+[<ore:ingotIron>,<ore:ingotIron>,<ore:ingotIron>]]);
+//Iron block(only for deco)
 
 recipes.remove(<Railcraft:cube:9>);
 recipes.remove(<ore:ingotCopper>);
@@ -113,8 +145,27 @@ recipes.addShaped(<Railcraft:cube:2>,
 [<ore:ingotSteel>,<ore:ingotSteel>,<ore:ingotSteel>]]);
 //Steel block
 
+recipes.remove(<Railcraft:slab:4>);
+recipes.addShaped(<Railcraft:slab:4> * 6,
+[[null,chisel,null],
+[<tfccellars:Ice>,<tfccellars:Ice>,<tfccellars:Ice>],
+[null,bestanvil,null]]);
+recipes.remove(<minecraft:ice>);
+recipes.addShaped(<tfccellars:Ice>,
+[[<Railcraft:slab:4>],
+[<Railcraft:slab:4>]]);
+//ice slab
+
+recipes.remove(<Railcraft:slab:5>);
+recipes.addShaped(<Railcraft:slab:5> * 6,
+[[null,chisel,null],
+[<minecraft:packed_ice>,<minecraft:packed_ice>,<minecraft:packed_ice>],
+[null,bestanvil,null]]);
+//packed ice slab
+
 recipes.remove(<Railcraft:slab:39>);
 recipes.addShaped(<Railcraft:slab:39> * 6,
 [[null,chisel,null],
 [<minecraft:obsidian>,<minecraft:obsidian>,<minecraft:obsidian>],
 [null,bestanvil,null]]);
+//obsidian slab

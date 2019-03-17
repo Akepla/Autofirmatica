@@ -25,13 +25,6 @@ var tfcPlanks = [<terrafirmacraft:planks>, <terrafirmacraft:planks:1>, <terrafir
 <terrafirmacraft:planks:11>, <terrafirmacraft:planks:12>, <terrafirmacraft:planks:13>, <terrafirmacraft:planks:14>, 
 <terrafirmacraft:planks:15>, <terrafirmacraft:planks:16>] as IItemStack[];
 
-recipes.remove(<Railcraft:machine.alpha:7>);
-recipes.addShaped(<Railcraft:machine.alpha:7> * 4, 
-[[<ore:plateIron>,<ore:stoneBricks>,<ore:plateIron>],
-[<ore:stoneBricks>,null,<ore:stoneBricks>],
-[<ore:plateIron>,<ore:stoneBricks>,<ore:plateIron>]]);
-//recipes for coke oven
-
 recipes.remove(<Railcraft:machine.alpha:12>);
 recipes.addShaped(<Railcraft:machine.alpha:12> * 4, 
 [[<terrafirmacraft:item.Steel Sheet>,<terrafirmacraft:item.Steel Tuyere>,<terrafirmacraft:item.Steel Sheet>],
@@ -49,10 +42,8 @@ recipes.addShaped(<Railcraft:machine.alpha:15> * 3,
 for i, log in tfcLogs {
     var plank = tfcPlanks[i];
 	var lumber = tfcLumbers[i];
-    mods.railcraft.RockCrusher.addRecipe(log, true, false,[plank,lumber,lumber,lumber],[1.0,1.0,0.5,0.5]);
+    mods.railcraft.RockCrusher.addRecipe(log, true, false,[plank,lumber * 2,lumber,lumber],[1.0,1.0,0.5,0.5]);
 	//automate the wood process
-	mods.railcraft.CokeOven.addRecipe(<terrafirmacraft:item.coal:1>,<liquid:creosote>*250,log,400);
-	//charcoal compat
 }
 
 mods.railcraft.CokeOven.addRecipe(<Railcraft:fuel.coke>,<liquid:creosote>*300,<terrafirmacraft:item.coal>,400);
@@ -61,21 +52,35 @@ mods.railcraft.CokeOven.addRecipe(<Railcraft:fuel.coke>,<liquid:creosote>*300,<t
 mods.railcraft.CokeOven.removeRecipe(<minecraft:coal:1>);
 //charcoal compat
 
+recipes.remove(<Railcraft:nugget>);
+recipes.remove(<Railcraft:nugget:1>);
+recipes.remove(<Railcraft:nugget:2>);
+recipes.remove(<Railcraft:nugget:3>);
+recipes.remove(<Railcraft:nugget:4>);
+//remove nugget
+
 recipes.addShapeless(<Railcraft:cube:4>,
 [<Railcraft:dust>, <Railcraft:dust>, <Railcraft:dust>, <Railcraft:dust>]);
+//crushed obsidian
 
 recipes.addShaped(<minecraft:obsidian>,
 [[hammer, <Railcraft:dust>, null],
 [<Railcraft:dust>, <Railcraft:dust>, <Railcraft:dust>],
 [null, <Railcraft:dust>, chisel]]);
+//vanilla obsidian
 
-mods.railcraft.RockCrusher.addRecipe(<terrafirmacraft:StoneIgExCobble>, true, false,[<Railcraft:dust> * 2, <Railcraft:dust>, <Railcraft:dust>], [1.0,0.5,0.5]);
-mods.railcraft.RockCrusher.addRecipe(<terrafirmacraft:StoneIgExCobble:1>, true, false,[<Railcraft:dust> * 2, <Railcraft:dust>, <Railcraft:dust>], [1.0,0.5,0.5]);
-mods.railcraft.RockCrusher.addRecipe(<terrafirmacraft:StoneIgExCobble:2>, true, false,[<Railcraft:dust> * 2, <Railcraft:dust>, <Railcraft:dust>], [1.0,0.5,0.5]);
-mods.railcraft.RockCrusher.addRecipe(<terrafirmacraft:StoneIgExCobble:3>, true, false,[<Railcraft:dust> * 2, <Railcraft:dust>, <Railcraft:dust>], [1.0,0.5,0.5]);
-mods.railcraft.RockCrusher.addRecipe(<terrafirmacraft:StoneIgInCobble>, true, false,[<Railcraft:dust> * 2, <Railcraft:dust>, <Railcraft:dust>], [1.0,0.5,0.5]);
-mods.railcraft.RockCrusher.addRecipe(<terrafirmacraft:StoneIgExCobble:1>, true, false,[<Railcraft:dust> * 2, <Railcraft:dust>, <Railcraft:dust>], [1.0,0.5,0.5]);
-mods.railcraft.RockCrusher.addRecipe(<terrafirmacraft:StoneIgExCobble:2>, true, false,[<Railcraft:dust> * 2, <Railcraft:dust>, <Railcraft:dust>], [1.0,0.5,0.5]);
+mods.railcraft.RockCrusher.removeRecipe(<Railcraft:machine.alpha>);
+mods.railcraft.RockCrusher.removeRecipe(<Railcraft:machine.alpha:2>);
+mods.railcraft.RockCrusher.removeRecipe(<Railcraft:machine.alpha:13>);
+//remove world anchor reuse
+
+mods.railcraft.RockCrusher.addRecipe(<terrafirmacraft:StoneIgExCobble>, true, false,[<Railcraft:dust>], [0.5]);
+mods.railcraft.RockCrusher.addRecipe(<terrafirmacraft:StoneIgExCobble:1>, true, false,[<Railcraft:dust>], [0.5]);
+mods.railcraft.RockCrusher.addRecipe(<terrafirmacraft:StoneIgExCobble:2>, true, false,[<Railcraft:dust>], [0.5]);
+mods.railcraft.RockCrusher.addRecipe(<terrafirmacraft:StoneIgExCobble:3>, true, false,[<Railcraft:dust>], [0.5]);
+mods.railcraft.RockCrusher.addRecipe(<terrafirmacraft:StoneIgInCobble>, true, false,[<Railcraft:dust>], [0.5]);
+mods.railcraft.RockCrusher.addRecipe(<terrafirmacraft:StoneIgExCobble:1>, true, false,[<Railcraft:dust>], [0.5]);
+mods.railcraft.RockCrusher.addRecipe(<terrafirmacraft:StoneIgExCobble:2>, true, false,[<Railcraft:dust>], [0.5]);
 //Obsidian
 
 furnace.setFuel(<terrafirmacraft:item.coal>, 20000);

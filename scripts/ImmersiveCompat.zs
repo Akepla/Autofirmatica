@@ -20,9 +20,24 @@ recipes.addShaped(<ImmersiveEngineering:tool>,
 [<ore:treatedStick>,null,null]]);
 //hammah!
 
+recipes.remove(<Railcraft:machine.alpha:7>);
+recipes.addShaped(<Railcraft:machine.alpha:7> * 4, 
+[[<ore:plateIron>,<ore:stoneBricks>,<ore:plateIron>],
+[<ore:stoneBricks>,null,<ore:stoneBricks>],
+[<ore:plateIron>,<ore:stoneBricks>,<ore:plateIron>]]);
+//recipes for coke oven
+
 recipes.remove(<ImmersiveEngineering:material:14>);
 recipes.remove(<ImmersiveEngineering:material:15>);
 recipes.remove(<ImmersiveEngineering:material:16>);
+recipes.remove(<ImmersiveEngineering:metal:22>);
+recipes.remove(<ImmersiveEngineering:metal:23>);
+recipes.remove(<ImmersiveEngineering:metal:24>);
+recipes.remove(<ImmersiveEngineering:metal:25>);
+recipes.remove(<ImmersiveEngineering:metal:26>);
+recipes.remove(<ImmersiveEngineering:metal:27>);
+recipes.remove(<ImmersiveEngineering:metal:28>);
+recipes.remove(<ImmersiveEngineering:metal:29>);
 recipes.remove(<ImmersiveEngineering:metal:30>);
 recipes.remove(<ImmersiveEngineering:metal:31>);
 recipes.remove(<ImmersiveEngineering:metal:32>);
@@ -41,7 +56,7 @@ mods.immersiveengineering.MetalPress.removeRecipe(<ImmersiveEngineering:metal:35
 mods.immersiveengineering.MetalPress.removeRecipe(<ImmersiveEngineering:metal:36>);
 mods.immersiveengineering.MetalPress.removeRecipe(<ImmersiveEngineering:metal:37>);
 mods.immersiveengineering.MetalPress.removeRecipe(<ImmersiveEngineering:metal:38>);
-//plate & stick compat(WIP)
+//plate, nugget & stick removal
 
 mods.immersiveengineering.MetalPress.removeRecipe(<terrafirmacraft:item.Wrought Iron Double Sheet>);
 mods.immersiveengineering.MetalPress.removeRecipe(<terrafirmacraft:item.Gold Double Sheet>);
@@ -87,4 +102,6 @@ mods.immersiveengineering.MetalPress.removeRecipe(<terrafirmacraft:item.Zinc She
 mods.immersiveengineering.MetalPress.removeRecipe(<terrafirmacraft:item.Black Steel Sheet>);
 mods.immersiveengineering.MetalPress.removeRecipe(<terrafirmacraft:item.Red Steel Sheet>);
 mods.immersiveengineering.MetalPress.removeRecipe(<terrafirmacraft:item.Blue Steel Sheet>);
+//<ImmersiveEngineering:mold> plate
+//<ImmersiveEngineering:mold:2> stick
 //sheet compat
