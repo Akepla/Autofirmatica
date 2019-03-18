@@ -20,8 +20,8 @@ recipes.addShaped(<ImmersiveEngineering:tool>,
 [<ore:treatedStick>,null,null]]);
 //hammah!
 
-recipes.remove(<Railcraft:machine.alpha:7>);
-recipes.addShaped(<Railcraft:machine.alpha:7> * 4, 
+recipes.remove(<ImmersiveEngineering:stoneDecoration:1>);
+recipes.addShaped(<ImmersiveEngineering:stoneDecoration:1> * 4, 
 [[<ore:plateIron>,<ore:stoneBricks>,<ore:plateIron>],
 [<ore:stoneBricks>,null,<ore:stoneBricks>],
 [<ore:plateIron>,<ore:stoneBricks>,<ore:plateIron>]]);

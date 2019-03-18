@@ -24,7 +24,14 @@ for i, Sio in tfcSmallIronOre {
 	mods.immersiveengineering.BlastFurnace.addRecipe(<terrafirmacraft:item.Pig Iron Ingot> * 2,Io * 10,2000,<ImmersiveEngineering:material:13>*3);
 	mods.immersiveengineering.BlastFurnace.addRecipe(<terrafirmacraft:item.Pig Iron Ingot> * 3,Rio * 3,2000,<ImmersiveEngineering:material:13>*3);
 	//early automated iron
+	mods.immersiveengineering.Crusher.addRecipe(<tfctech:item.Pig Iron Dust>, Sio, 800);
+	//advanced iron
 }
 
 mods.railcraft.Rolling.addShaped(<terrafirmacraft:item.Wrought Iron Ingot>, [[null,null,null],[null,<terrafirmacraft:item.Pig Iron Ingot>,null]]);
 //pig iron to iron
+
+mods.Terrafirmacraft.ItemHeat.removeRecipe(<tfctech:item.Pig Iron Dust>);
+mods.immersiveengineering.ArcFurnace.removeRecipe(<terrafirmacraft:item.Pig Iron Ingot>);
+mods.immersiveengineering.ArcFurnace.addRecipe(<terrafirmacraft:item.Pig Iron Ingot>, <tfctech:item.Pig Iron Dust> * 10, <ImmersiveEngineering:material:13> * 3, 2400, 4096);
+//advanced automation

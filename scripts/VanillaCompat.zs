@@ -59,7 +59,7 @@ recipes.addShaped(<CarpentersBlocks:itemCarpentersChisel>,
 //carpenter block compat
 
 
-recipes.addShaped(<minecraft:mob_spawner:33>,
+recipes.addShaped(<minecraft:mob_spawner:33>.withTag({display:{Lore:["§r§4在Site-231上将要立起血与骨与腱之物，会旅行斜视进食的树。它将滴下奇火，火焰同等灼人而暖人。人们会仰视它，希求在他们还有机会时就应当听从。§r"]}}),
 [[<terrafirmacraft:item.Rose Gold Double Sheet>,<ore:ingotUnstable>,<terrafirmacraft:item.Rose Gold Double Sheet>],
 [<ore:ingotUnstable>,<terrafirmacraft:item.Agate:4>,<ore:ingotUnstable>],
 [<terrafirmacraft:item.Rose Gold Double Sheet>,<ore:ingotUnstable>,<terrafirmacraft:item.Rose Gold Double Sheet>]]);
@@ -76,6 +76,13 @@ recipes.addShaped(<minecraft:web>,
 [null,<ore:materialString>,null],
 [<ore:materialCloth,null,<ore:materialCloth>]]);
 //cobweb
+
+recipes.remove(<minecraft:nether_star>);
+recipes.addShaped(<minecraft:nether_star>,
+[[null,<minecraft:ghast_tear>,null],
+[<terrafirmacraft:item.Sapphire:4>,<OpenBlocks:tank>.withTag({tank: {FluidName: "juiceonion", Amount: 16000}}),<terrafirmacraft:item.Jade:4>],
+[null,<minecraft:ender_pearl>,null]]);
+//nether star
 
 //recipes.addShapeless(<minecraft:ice>,
 //[<tfccellars:Ice>,chisel]);
