@@ -35,7 +35,7 @@ Tiny Tweaks：
 - [x] 烈焰人和恶魂的刷怪笼合成（再加一颗最大号的宝石）
 - [x] ExU的简单合成兼容
 - [ ] 用BTS的活塞合成覆盖原版活塞合成，但仍然提供相互转换的合成表。
-- [x] 添加原版瓶子合成以确保对杂酚油的兼容性
+- [ ] 添加原版瓶子合成以确保对杂酚油的兼容性（放弃）-----添加tfcrailcraft杂酚油木桶的兼容
 - [ ] 用TFC Tweaker代替TFC Primal Tech的造纸（Reed浸泡成改名成Treated Reed/Cellulose/Reed Fiber的原版Sugarcane）
 - [ ] 大幅提高Bibliocraft工作台的价格！原因严格保密
 
