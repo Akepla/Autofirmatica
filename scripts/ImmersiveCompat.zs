@@ -56,6 +56,9 @@ mods.immersiveengineering.MetalPress.removeRecipe(<ImmersiveEngineering:metal:35
 mods.immersiveengineering.MetalPress.removeRecipe(<ImmersiveEngineering:metal:36>);
 mods.immersiveengineering.MetalPress.removeRecipe(<ImmersiveEngineering:metal:37>);
 mods.immersiveengineering.MetalPress.removeRecipe(<ImmersiveEngineering:metal:38>);
+mods.immersiveengineering.MetalPress.removeRecipe(<tfctech:item.Dense Wrought Iron Plate>);
+mods.immersiveengineering.MetalPress.removeRecipe(<tfctech:item.Constantan Plate>);
+mods.immersiveengineering.MetalPress.removeRecipe(<tfctech:item.Invar Plate>);
 //plate, nugget & stick removal
 
 mods.immersiveengineering.MetalPress.removeRecipe(<terrafirmacraft:item.Wrought Iron Double Sheet>);

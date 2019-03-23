@@ -63,10 +63,10 @@ recipes.addShapeless(<Railcraft:cube:4>,
 [<Railcraft:dust>, <Railcraft:dust>, <Railcraft:dust>, <Railcraft:dust>]);
 //crushed obsidian
 
-recipes.addShaped(<minecraft:obsidian>,
-[[hammer, <Railcraft:dust>, null],
-[<Railcraft:dust>, <Railcraft:dust>, <Railcraft:dust>],
-[null, <Railcraft:dust>, chisel]]);
+mods.railcraft.Rolling.addShaped(<minecraft:obsidian>,
+[[<Railcraft:dust>, <Railcraft:dust>, <Railcraft:dust>],
+[<Railcraft:dust>, null, <Railcraft:dust>],
+[<Railcraft:dust>, <Railcraft:dust>, <Railcraft:dust>]]);
 //vanilla obsidian
 
 mods.railcraft.RockCrusher.removeRecipe(<Railcraft:machine.alpha>);
@@ -79,8 +79,8 @@ mods.railcraft.RockCrusher.addRecipe(<terrafirmacraft:StoneIgExCobble:1>, true, 
 mods.railcraft.RockCrusher.addRecipe(<terrafirmacraft:StoneIgExCobble:2>, true, false,[<Railcraft:dust>], [0.5]);
 mods.railcraft.RockCrusher.addRecipe(<terrafirmacraft:StoneIgExCobble:3>, true, false,[<Railcraft:dust>], [0.5]);
 mods.railcraft.RockCrusher.addRecipe(<terrafirmacraft:StoneIgInCobble>, true, false,[<Railcraft:dust>], [0.5]);
-mods.railcraft.RockCrusher.addRecipe(<terrafirmacraft:StoneIgExCobble:1>, true, false,[<Railcraft:dust>], [0.5]);
-mods.railcraft.RockCrusher.addRecipe(<terrafirmacraft:StoneIgExCobble:2>, true, false,[<Railcraft:dust>], [0.5]);
+mods.railcraft.RockCrusher.addRecipe(<terrafirmacraft:StoneIgInCobble:1>, true, false,[<Railcraft:dust>], [0.5]);
+mods.railcraft.RockCrusher.addRecipe(<terrafirmacraft:StoneIgInCobble:2>, true, false,[<Railcraft:dust>], [0.5]);
 //Obsidian
 
 furnace.setFuel(<terrafirmacraft:item.coal>, 20000);

@@ -43,6 +43,47 @@ recipes.addShapeless(<minecraft:packed_ice>,
 [<tfccellars:Ice>,<tfccellars:Ice>,<tfccellars:Ice>,<tfccellars:Ice>]);
 //packed ice
 
+recipes.remove(<punt:item.punt>);
+recipes.addShaped(<punt:item.punt>,
+[[<ore:stickWood>, <terrafirmacraft:item.Wool>, null],
+[<ore:stickWood>, <terrafirmacraft:item.Wool>, <terrafirmacraft:item.Wool>],
+[<ore:plankWood>, <minecraft:boat>, <ore:plankWood>]]);
+
+recipes.remove(<whitehall:item.whitehall>);
+recipes.addShaped(<whitehall:item.whitehall>,
+[[<ore:treatedStick>, <minecraft:carpet>, null],
+[<ore:treatedStick>, <minecraft:carpet>, <minecraft:carpet>],
+[<ore:plankWood>, <minecraft:boat>, <ore:plankWood>]]);
+
+recipes.remove(<hoy:item.hoy>);
+recipes.addShaped(<hoy:item.hoy>,
+[[<ore:treatedStick>, <minecraft:wool>, null],
+[<ore:stickIron>, <minecraft:wool>, <minecraft:wool>],
+[<ore:plankWood>, <minecraft:boat>, <ore:plankWood>]]);
+//small boat compat
+
+/*
+recipes.remove(<minecraft:piston>);
+recipes.addShaped(<bis:SlimePistonBase>,
+[[<ore:plankWood>, <ore:plankWood>, <ore:plankWood>],
+[<ore:stoneSmooth>, <minecraft:redstone>, <ore:stoneSmooth>],
+[<ore:stoneSmooth>, <ore:ingotIron>, <ore:stoneSmooth>]]);
+recipes.addShaped(<minecraft:piston>, [<bis:SlimePistonBase>]);
+//piston
+
+recipes.remove(<minecraft:sticky_piston>);
+recipes.addShapeless(<bis:StickySlimePistonBase>,
+[<bis:SlimePistonBase>, <tfctech:item.Glue>]);
+recipes.addShaped(<minecraft:sticky_piston>, [<bis:StickySlimePistonBase>]);
+//sticky piston
+*/
+
+recipes.remove(<minecraft:comparator>);
+recipes.addShaped(<minecraft:comparator>,
+[[null, <minecraft:redstone_torch>, null],
+[<minecraft:redstone_torch>, <tfcm:item.Circuit>, <minecraft:redstone_torch>]]);
+//comparator
+
 recipes.remove(<waystones:waystone>);
 //waystones are only able to placed by op
 
@@ -51,11 +92,23 @@ recipes.addShaped(<CarpentersBlocks:itemCarpentersHammer>,
 [[<ore:ingotIron>,<ore:ingotIron>,null],
 [null,<CarpentersBlocks:blockCarpentersBlock>,<ore:ingotIron>],
 [null,<CarpentersBlocks:blockCarpentersBlock>,null]]);
+
 recipes.remove(<CarpentersBlocks:itemCarpentersChisel>);
 recipes.addShaped(<CarpentersBlocks:itemCarpentersChisel>,
 [[<ore:ingotIron>],
 [<CarpentersBlocks:blockCarpentersBlock>],
 [<CarpentersBlocks:blockCarpentersBlock>]]);
+
+recipes.remove(<CarpentersBlocks:blockCarpentersTorch>);
+recipes.addShaped(<CarpentersBlocks:blockCarpentersTorch>,
+[[<minecraft:torch>],
+[<CarpentersBlocks:blockCarpentersBlock>]]);
+
+recipes.remove(<CarpentersBlocks:blockCarpentersDaylightSensor>);
+recipes.addShaped(<CarpentersBlocks:blockCarpentersDaylightSensor>,
+[[<minecraft:glass>, <minecraft:glass>, <minecraft:glass>],
+[<minecraft:redstone>, <tfcm:item.Circuit>, <minecraft:redstone>],
+[<CarpentersBlocks:blockCarpentersBlock>, <CarpentersBlocks:blockCarpentersBlock>, <CarpentersBlocks:blockCarpentersBlock>]]);
 //carpenter block compat
 
 

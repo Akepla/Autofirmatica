@@ -100,6 +100,10 @@
       },
       {
         "type": "before",
+        "target": "CarpentersBlocks"
+      },
+      {
+        "type": "before",
         "target": "MineTweaker3"
       },
       {
@@ -148,11 +152,35 @@
       },
       {
         "type": "before",
+        "target": "punt"
+      },
+      {
+        "type": "before",
+        "target": "whitehall"
+      },
+      {
+        "type": "before",
+        "target": "hoy"
+      },
+      {
+        "type": "before",
+        "target": "smallboats"
+      },
+      {
+        "type": "before",
         "target": "TerraFirmaCraftNEIplugin"
       },
       {
         "type": "before",
+        "target": "tfcrailcraft"
+      },
+      {
+        "type": "before",
         "target": "TFCTweaker"
+      },
+      {
+        "type": "before",
+        "target": "tis3d"
       },
       {
         "type": "before",
